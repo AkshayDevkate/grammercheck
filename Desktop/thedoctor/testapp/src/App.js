@@ -8,6 +8,16 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 
+
+//
+
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import OutlinedInput from '@mui/material/OutlinedInput';
+
+
 // React say to listen text
 
 import { SayButton } from 'react-say';
@@ -71,7 +81,10 @@ export default function CustomizedAccordions() {
 
   const [listen, setListen] = useState("") 
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = React.useState('');
+  const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
 
   // next button accordion 2 and 3
   const nextChange = () => {
@@ -128,8 +141,8 @@ export default function CustomizedAccordions() {
     }
 
 
-    const handleClickEmail = event => {
-      setEmail(event.target.value);
+    const handleClickEmail  = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setName(event.target.value);
     };
 
 
@@ -156,10 +169,10 @@ export default function CustomizedAccordions() {
                 <button onClick={resetTranscript}>Reset</button>
                 <p>{transcript}</p>
                 <br/><br/>
-                <p><label>Enter Email Address</label>
-                <input type= 'text' value={email}
-            onChange={handleClickEmail}/>
-                *</p> 
+                <label>Enter Email Address</label>
+               
+            
+                *
 
                 <button variant="contained" color='success' expanded={expanded === 2} onClick={display}>
                    Continue
