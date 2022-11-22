@@ -7,4 +7,6 @@ branach > main > Desktop/thedoctor/testapp > src > [App.js](https://github.com/A
 
 Deployed on > https://akshaydevkate.github.io/grammercheck/
 
+Technical architecture > https://s.icepanel.io/EUBhdbio2gaJyG/eFCR
+
 
