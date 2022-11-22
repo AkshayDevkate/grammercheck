@@ -111,15 +111,23 @@ function App() {
 </div>
 
 <div style="width: 80%; float:right">
-<label>Enter your name:
-        <input
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        {transcript}
-      </label>
-      <GrammarlyEditorPlugin clientId="client_VnGHunVqY1HWNpMXAgmGc3">
+<GrammarlyEditorPlugin clientId="client_VnGHunVqY1HWNpMXAgmGc3">
+    
+
+
+
+    {/* Copy to clipboard - https://medium.com/nerd-for-tech/how-to-add-copy-to-clipboard-functionality-in-a-reactjs-app-45404413fdb2 */}
+       <p>{name}</p>
+       <button onClick={() => {
+         navigator.clipboard.writeText(text);}}>
+        Copy
+       </button>
+
+
+  
+      <textarea value={name} ></textarea> 
+    
+    </GrammarlyEditorPlugin>
 </div>
 
 
